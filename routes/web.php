@@ -24,3 +24,7 @@ Route::get('/view-app', function () {
 Route::get('/mahasiswa/{nama}', function ($nama) {
     return "Nama Mahasiswa :  $nama";
 });
+
+Route::get('/umur/{umur}', function ($umur) {
+    return "Umur Mahasiswa :  $umur";
+});
