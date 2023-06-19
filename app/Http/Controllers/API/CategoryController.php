@@ -13,13 +13,14 @@ class CategoryController extends Controller
     public function index()
     {
         // $data = Category::all();
-        $data = Category::with('products')->get();
+        $data_awal = Category::with('products')->get();
+        $data = CategoryResource::collection($data_awal);
         return response()->json($data, 200);
     }
 
     public function show($id)
     {
-        $data = Category::with('products')->where('id', $id)->first();
+        $data = Category::with('products')->where('id', $id)->withCount('products')->first();
         return response()->json($data, 200);
     }
 
