@@ -5,9 +5,11 @@ use App\Http\Controllers\TestController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\InstitutionController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::view('/', 'welcome');
 
 Route::prefix('/mahasiswa')->group(function () {
 

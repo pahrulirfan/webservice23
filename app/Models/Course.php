@@ -12,4 +12,7 @@ class Course extends Model
     // jika nama tabel berbeda dengan nama model,
     // maka buat property $table
     protected $table = 'courses';
+
+    // untuk proses mass assigment harus ditambahkan guard / fillable
+    protected $guarded = [];
 }

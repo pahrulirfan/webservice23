@@ -5,7 +5,7 @@
 @section('content')
     <div class="alert alert-info">Course</div>
 
-    <a href="{{ route('course.create') }}" class="btn btn-success float-end mb-3">Tambah Data</a>
+    <a href="{{ route('course.create') }}" class="btn btn-success float-end mb-3">Add Data</a>
 
     <table class="table table-bordered">
         <thead>
@@ -15,7 +15,7 @@
                 <th>Description</th>
                 <th>Price</th>
                 <th>Institution</th>
-                <th>Aksi</th>
+                <th>#</th>
             </tr>
         </thead>
         <tbody>
