@@ -12,9 +12,18 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        $data = Category::all();
+        // $data = Category::all();
+        $data = Category::with('products')->get();
         return response()->json($data, 200);
     }
+
+    public function show($id)
+    {
+        $data = Category::with('products')->where('id', $id)->first();
+        return response()->json($data, 200);
+    }
+
+
 
     public function store(Request $request)
     {
